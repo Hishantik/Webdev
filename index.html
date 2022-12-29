@@ -1,0 +1,31 @@
+<!<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Particles</title>
+  </head>
+
+  <body>
+    <div id="particles-js">
+      <div id="typewriter1"></div>
+    </div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles-js', 'particles.json',
+        function () {
+          console.log('particles.json is loaded');
+        });
+      const instance = new Typewriter('#typewriter1', {
+        loop: true
+      });
+      instance.typeString("Hello World!")
+        .pauseFor(1000)
+        .deleteAll(10)
+        .typeString('Welcome to my github profile.')
+        .deleteAll()
+        .start();
+    </script>
+  </body>
+
+  </html>
